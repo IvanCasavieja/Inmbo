@@ -1,0 +1,274 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.475);
+  align-items: center;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+#menu {
+  justify-content: end;
+}
+
+nav div a {
+  margin-right: 40px;
+  padding: 8px 20px;
+  border-radius: 8px;
+  transition: 0.5s;
+  color: white;
+}
+
+#inicio {
+  margin-left: 20px;
+}
+
+nav div a::after {
+  content: "";
+  box-sizing: border-box;
+  display: block;
+  height: 0.5px;
+  background-color: rgb(185, 218, 247);
+  width: 70px;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+
+nav div a:hover:after {
+  transform: scaleX(1);
+}
+
+nav form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  background-color: aliceblue;
+  border-radius: 15px;
+  height: 30px;
+  transition: 0.2s;
+}
+
+nav form:hover {
+  outline: 0.5px solid rgb(185, 218, 247);
+}
+
+nav form input {
+  font-size: 16px;
+  background-color: transparent;
+  height: 30px;
+  width: 250px;
+  border-radius: 15px;
+  padding-left: 15px;
+}
+
+nav form button {
+  background: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  transition: 0.5s;
+  margin-right: 10px;
+}
+
+nav form button:hover {
+  background-color: rgb(185, 218, 247);
+}
+
+nav form button i {
+  transition: 0.5s;
+}
+
+nav form button:hover i {
+  color: rgb(77, 77, 77);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  background: linear-gradient(
+    45deg,
+    rgb(75, 2, 11),
+    rgb(54, 1, 28),
+    rgb(49, 9, 9)
+  );
+  background-size: 400% 400%;
+  position: relative;
+  animation: cambiar 10s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes cambiar {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.center {
+  margin-top: 40px;
+  display: flex;
+  width: 100vw;
+  align-items: center;
+}
+
+.filtre {
+  border-radius: 15px;
+  margin-left: 25px;
+  width: calc(25% - 50px);
+  height: calc(85vh - 60px);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.center---filtre {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.filtre input {
+  margin-bottom: 40px;
+  width: 50%;
+  border: 1px black solid;
+  height: 20px;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.filtre a {
+  text-align: center;
+  margin-bottom: 40px;
+  width: 50%;
+  height: 20px;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.filtre a::after {
+  content: "";
+  box-sizing: border-box;
+  display: block;
+  height: 0.5px;
+  background-color: rgb(185, 218, 247);
+  width: 100%;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+
+.filtre a:hover:after {
+  transform: scaleX(1);
+}
+
+.sub---menu {
+  border-left: 1px solid black;
+  height: 0;
+  overflow: hidden;
+  transition: ease-in height 0.3s;
+}
+
+.sub---menu.filtro---desplegado {
+  height: 80px;
+}
+
+.map {
+  border-radius: 15px;
+  background-color: white;
+  margin-left: 50px;
+  margin-right: 25px;
+  width: calc(50% - 50px);
+  height: calc((85vh - 60px));
+}
+
+.information {
+  margin-left: 25px;
+  border-radius: 15px;
+  background-color: white;
+  margin-right: 25px;
+  width: calc(25% - 50px);
+  height: calc(85vh - 60px);
+  overflow: hidden;
+}
+
+.container___slider {
+  background-color: red;
+  width: 100%;
+  height: 40%;
+  max-width: 900px;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  margin-left: -100%;
+}
+
+.slider___section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider___img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn___slider {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.144);
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.btn___slider:hover {
+  background-color: #fff;
+}
+
+.btn___slider---derecha {
+  right: 10px;
+}
+.btn___slider---izquierda {
+  left: 10px;
+}
